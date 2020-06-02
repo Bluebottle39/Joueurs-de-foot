@@ -27,12 +27,13 @@ namespace Joueurs_de_foot
             string _numTelephone = txtNumTéléphone.Text;
             
             Joueur toadd = new Joueur(_nom, _prénom, _numTelephone);
-            this.Close();
+
+            Close();
         }
 
         private void cmdCancel_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
     }
 }
