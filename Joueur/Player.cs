@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace joueur
+namespace player
 {
-    public class Joueur
+    public class Player
     {
         //Attribute
         private string name;
@@ -31,15 +31,21 @@ namespace joueur
             get { return phoneNumber; }   // get method
             set { phoneNumber = value; }  // set method
         }
-        public string Names
+        
+        //public string Names
+        //{
+        //    get { return name + " " + surname;}
+        //}
+
+        public override string ToString()
         {
-            get { return name + " " + surname;}
+            return name + " " + surname;
         }
 
 
 
         //construtor         
-        public Joueur(string _nom, string _prénom, string _numTelephone)
+        public Player(string _nom, string _prénom, string _numTelephone)
         {
             this.name = _nom;
             this.surname = _prénom;

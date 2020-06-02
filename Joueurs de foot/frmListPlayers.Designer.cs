@@ -79,7 +79,6 @@
             // 
             // lstPlayer
             // 
-            this.lstPlayer.DisplayMember = "Joueur.Names";
             this.lstPlayer.FormattingEnabled = true;
             this.lstPlayer.Location = new System.Drawing.Point(12, 30);
             this.lstPlayer.Name = "lstPlayer";

@@ -49,25 +49,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Liste.cs">
+    <Compile Include="frmListPlayers.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Liste.Designer.cs">
-      <DependentUpon>Liste.cs</DependentUpon>
+    <Compile Include="frmListPlayers.Designer.cs">
+      <DependentUpon>frmListPlayers.cs</DependentUpon>
     </Compile>
-    <Compile Include="Joueur.cs">
+    <Compile Include="frmPlayer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Joueur.Designer.cs">
-      <DependentUpon>Joueur.cs</DependentUpon>
+    <Compile Include="frmPlayer.Designer.cs">
+      <DependentUpon>frmPlayer.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Liste.resx">
-      <DependentUpon>Liste.cs</DependentUpon>
+    <EmbeddedResource Include="frmListPlayers.resx">
+      <DependentUpon>frmListPlayers.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Joueur.resx">
-      <DependentUpon>Joueur.cs</DependentUpon>
+    <EmbeddedResource Include="frmPlayer.resx">
+      <DependentUpon>frmPlayer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -92,9 +92,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Joueur\Joueur.csproj">
+    <ProjectReference Include="..\Joueur\Player.csproj">
       <Project>{2c01aef3-479c-46af-80ef-a713611d50b9}</Project>
-      <Name>Joueur</Name>
+      <Name>Player</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

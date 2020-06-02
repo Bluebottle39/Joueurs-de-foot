@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30104.148
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Joueurs de foot", "Joueurs de foot\Joueurs de foot.csproj", "{B5602E75-D70A-4F41-B132-FEB7DC47C281}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Joueur", "Joueur\Joueur.csproj", "{2C01AEF3-479C-46AF-80EF-A713611D50B9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Player", "Joueur\Player.csproj", "{2C01AEF3-479C-46AF-80EF-A713611D50B9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

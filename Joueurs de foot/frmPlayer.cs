@@ -7,13 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using joueur;
+using player;
 
 namespace Joueurs_de_foot
 {
     public partial class frmPlayer : Form
     {
-        public Joueur playertoadd;
+        public Player playertoadd;
 
 
         public frmPlayer()
@@ -31,7 +31,7 @@ namespace Joueurs_de_foot
             string _surname = txtPrénom.Text;
             string _phoneNumber = txtNumTéléphone.Text;
             
-            playertoadd = new Joueur(_name, _surname, _phoneNumber);
+            playertoadd = new Player(_name, _surname, _phoneNumber);
             
             Close();
         }
