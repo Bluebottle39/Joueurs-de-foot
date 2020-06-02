@@ -44,6 +44,7 @@
             this.cmdAdd.TabIndex = 0;
             this.cmdAdd.Text = "Ajouter";
             this.cmdAdd.UseVisualStyleBackColor = true;
+            this.cmdAdd.Click += new System.EventHandler(this.cmdAdd_Click);
             // 
             // cmdModify
             // 
@@ -74,6 +75,7 @@
             this.cmdQuit.TabIndex = 3;
             this.cmdQuit.Text = "Quitter";
             this.cmdQuit.UseVisualStyleBackColor = true;
+            this.cmdQuit.Click += new System.EventHandler(this.cmdQuit_Click);
             // 
             // lstPlayer
             // 

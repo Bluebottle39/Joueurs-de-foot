@@ -110,6 +110,7 @@
             this.cmdCancel.TabIndex = 8;
             this.cmdCancel.Text = "Annuler";
             this.cmdCancel.UseVisualStyleBackColor = true;
+            this.cmdCancel.Click += new System.EventHandler(this.cmdCancel_Click);
             // 
             // frmPlayer
             // 

@@ -16,5 +16,16 @@ namespace Joueurs_de_foot
         {
             InitializeComponent();
         }
+        
+        private void cmdAdd_Click(object sender, EventArgs e)
+        {
+            Form frmPlayer = new frmPlayer();
+            frmPlayer.ShowDialog();
+        }
+
+        private void cmdQuit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
