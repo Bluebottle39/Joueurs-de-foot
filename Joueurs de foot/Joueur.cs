@@ -13,6 +13,7 @@ namespace Joueurs_de_foot
 {
     public partial class frmPlayer : Form
     {
+        
         public frmPlayer()
         {
             InitializeComponent();
@@ -27,7 +28,7 @@ namespace Joueurs_de_foot
             string _numTelephone = txtNumTéléphone.Text;
             
             Joueur toadd = new Joueur(_nom, _prénom, _numTelephone);
-
+            Players.Add(toadd);
             Close();
         }
 
