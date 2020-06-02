@@ -14,23 +14,28 @@ namespace joueur
         private string phoneNumber;
 
         //methods
-        public string Nom   // property
+        public string Name   // property
         {
             get { return name; }   // get method
             set { name = value; }  // set method
         }
 
-        public string Prénom   // property
+        public string Surname   // property
         {
             get { return surname; }   // get method
             set { surname = value; }  // set method
         }
 
-        public string NumTelephone   // property
+        public string PhoneNumber   // property
         {
             get { return phoneNumber; }   // get method
             set { phoneNumber = value; }  // set method
         }
+        public string Names
+        {
+            get { return name + " " + surname;}
+        }
+
 
 
         //construtor         

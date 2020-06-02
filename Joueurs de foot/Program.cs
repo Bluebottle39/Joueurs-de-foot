@@ -16,7 +16,7 @@ namespace Joueurs_de_foot
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmPlayer());
+            Application.Run(new frmListPlayers());
         }
     }
 }
