@@ -9,36 +9,36 @@ namespace joueur
     public class Joueur
     {
         //Attribute
-        private string nom;
-        private string prénom;
-        private string numTelephone;
+        private string name;
+        private string surname;
+        private string phoneNumber;
 
         //methods
         public string Nom   // property
         {
-            get { return nom; }   // get method
-            set { nom = value; }  // set method
+            get { return name; }   // get method
+            set { name = value; }  // set method
         }
 
         public string Prénom   // property
         {
-            get { return prénom; }   // get method
-            set { prénom = value; }  // set method
+            get { return surname; }   // get method
+            set { surname = value; }  // set method
         }
 
         public string NumTelephone   // property
         {
-            get { return numTelephone; }   // get method
-            set { numTelephone = value; }  // set method
+            get { return phoneNumber; }   // get method
+            set { phoneNumber = value; }  // set method
         }
 
 
         //construtor         
         public Joueur(string _nom, string _prénom, string _numTelephone)
         {
-            this.nom = _nom;
-            this.prénom = _prénom;
-            this.numTelephone = _numTelephone;
+            this.name = _nom;
+            this.surname = _prénom;
+            this.phoneNumber = _numTelephone;
         }
     }
 

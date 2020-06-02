@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using joueur;
 
 namespace Joueurs_de_foot
 {
@@ -19,8 +20,11 @@ namespace Joueurs_de_foot
         
         private void cmdAdd_Click(object sender, EventArgs e)
         {
-            Form frmPlayer = new frmPlayer();
-            frmPlayer.ShowDialog();
+            frmPlayer addPlayer = new frmPlayer();
+            addPlayer.ShowDialog();
+            
+
+            lstPlayer.Items.Add(addPlayer.playertoadd);
         }
 
         private void cmdQuit_Click(object sender, EventArgs e)

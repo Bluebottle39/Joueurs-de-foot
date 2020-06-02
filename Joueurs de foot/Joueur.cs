@@ -13,7 +13,9 @@ namespace Joueurs_de_foot
 {
     public partial class frmPlayer : Form
     {
-        
+        public Joueur playertoadd;
+
+
         public frmPlayer()
         {
             InitializeComponent();
@@ -23,12 +25,14 @@ namespace Joueurs_de_foot
 
         private void cmdAddModify_Click(object sender, EventArgs e)
         {
-            string _nom = txtNom.Text;
-            string _prénom = txtPrénom.Text;
-            string _numTelephone = txtNumTéléphone.Text;
+
             
-            Joueur toadd = new Joueur(_nom, _prénom, _numTelephone);
-            Players.Add(toadd);
+            string _name = txtNom.Text;
+            string _surname = txtPrénom.Text;
+            string _phoneNumber = txtNumTéléphone.Text;
+            
+            playertoadd = new Joueur(_name, _surname, _phoneNumber);
+            
             Close();
         }
 
