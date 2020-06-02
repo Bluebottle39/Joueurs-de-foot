@@ -13,7 +13,13 @@ namespace Joueurs_de_foot
 {
     public partial class frmPlayer : Form
     {
-        public Player playertoadd;
+        private Player playerToAdd;
+
+        public Player PlayerToAdd   // property
+        {
+            get { return playerToAdd; }   // get method
+            //set { playertoadd = value; }  // set method
+        }
 
 
         public frmPlayer()
@@ -31,7 +37,7 @@ namespace Joueurs_de_foot
             string _surname = txtPrénom.Text;
             string _phoneNumber = txtNumTéléphone.Text;
             
-            playertoadd = new Player(_name, _surname, _phoneNumber);
+            playerToAdd = new Player(_name, _surname, _phoneNumber);
             
             Close();
         }

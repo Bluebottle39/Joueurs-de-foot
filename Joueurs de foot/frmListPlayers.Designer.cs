@@ -32,7 +32,7 @@
             this.cmdModify = new System.Windows.Forms.Button();
             this.cmdDelete = new System.Windows.Forms.Button();
             this.cmdQuit = new System.Windows.Forms.Button();
-            this.lstPlayer = new System.Windows.Forms.ListBox();
+            this.lstPlayers = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // cmdAdd
@@ -55,6 +55,7 @@
             this.cmdModify.TabIndex = 1;
             this.cmdModify.Text = "Modifier";
             this.cmdModify.UseVisualStyleBackColor = true;
+            this.cmdModify.Click += new System.EventHandler(this.cmdModify_Click);
             // 
             // cmdDelete
             // 
@@ -77,20 +78,20 @@
             this.cmdQuit.UseVisualStyleBackColor = true;
             this.cmdQuit.Click += new System.EventHandler(this.cmdQuit_Click);
             // 
-            // lstPlayer
+            // lstPlayers
             // 
-            this.lstPlayer.FormattingEnabled = true;
-            this.lstPlayer.Location = new System.Drawing.Point(12, 30);
-            this.lstPlayer.Name = "lstPlayer";
-            this.lstPlayer.Size = new System.Drawing.Size(302, 381);
-            this.lstPlayer.TabIndex = 4;
+            this.lstPlayers.FormattingEnabled = true;
+            this.lstPlayers.Location = new System.Drawing.Point(12, 30);
+            this.lstPlayers.Name = "lstPlayers";
+            this.lstPlayers.Size = new System.Drawing.Size(302, 381);
+            this.lstPlayers.TabIndex = 4;
             // 
             // frmListPlayers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(562, 450);
-            this.Controls.Add(this.lstPlayer);
+            this.Controls.Add(this.lstPlayers);
             this.Controls.Add(this.cmdQuit);
             this.Controls.Add(this.cmdDelete);
             this.Controls.Add(this.cmdModify);
@@ -107,6 +108,6 @@
         private System.Windows.Forms.Button cmdModify;
         private System.Windows.Forms.Button cmdDelete;
         private System.Windows.Forms.Button cmdQuit;
-        private System.Windows.Forms.ListBox lstPlayer;
+        private System.Windows.Forms.ListBox lstPlayers;
     }
 }

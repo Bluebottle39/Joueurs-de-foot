@@ -24,12 +24,37 @@ namespace Joueurs_de_foot
             addPlayer.ShowDialog();
             
 
-            lstPlayer.Items.Add(addPlayer.playertoadd);
+            lstPlayers.Items.Add(addPlayer.PlayerToAdd);
         }
 
         private void cmdQuit_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void cmdModify_Click(object sender, EventArgs e)
+        {
+            if (lstPlayers.SelectedIndex != -1)
+            {
+                Player player = new Player();
+                int index = lstPlayers.SelectedIndex;
+
+                // player initialisé avec les valeurs de l'élément sélectionné
+                player = lstPlayers.SelectedItem as Player;
+
+                frmPlayer modifyPlayer = new frmPlayer(player);
+
+                modifyPlayer.ShowDialog();
+
+                // Modification dans la liste et sélection du joueur
+                if (modifyPlayer.DialogResult == DialogResult.OK)
+                {
+                    lstPlayers.Items.Insert(index, modifyPlayer.Competitor);
+                    lstPlayers.Items.RemoveAt(index + 1);
+                    lstPlayers.SelectedIndex = index;
+
+                }
+            }
         }
     }
 }
