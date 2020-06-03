@@ -13,40 +13,60 @@ namespace Joueurs_de_foot
 {
     public partial class frmPlayer : Form
     {
-        private Player playerToAdd;
-        public int Cancel = 0;
+        private Player activePlayer;
+        
 
-        public Player PlayerToAdd   // property
+
+        public Player ActivePlayer
         {
-            get { return playerToAdd; }   // get method
-            //set { playertoadd = value; }  // set method
+            get { return activePlayer; }
+            set { activePlayer = value; }
         }
-
-
-        public frmPlayer()
-        {
-            InitializeComponent();
-        }
+ 
 
         
 
         private void cmdAddModify_Click(object sender, EventArgs e)
         {
 
-            
-            string _name = txtNom.Text;
-            string _surname = txtPrénom.Text;
-            string _phoneNumber = txtNumTéléphone.Text;
-            
-            playerToAdd = new Player(_name, _surname, _phoneNumber);
-            
+            //string _lastName = txtLastName.Text;
+            //string _firstName = txtFirstName.Text;
+            //string _phoneNumber = txtPhoneNumber.Text;
+
+            //activePlayer = new Player(_firstName, _lastName, _phoneNumber);
+
+            ActivePlayer.FirstName = txtFirstName.Text;
+            ActivePlayer.LastName = txtLastName.Text;
+            ActivePlayer.PhoneNumber = txtPhoneNumber.Text;
+
             Close();
         }
 
         private void cmdCancel_Click(object sender, EventArgs e)
         {
-            Cancel = 1;
+            
             Close();
         }
+
+
+
+        //Constructors
+        //public frmPlayer()
+        //{
+        //    InitializeComponent();
+        //}
+
+        public frmPlayer(Player playerToModify)
+        {
+            ActivePlayer = playerToModify;
+
+            InitializeComponent();
+            txtFirstName.Text = ActivePlayer.FirstName;
+            txtLastName.Text = ActivePlayer.LastName;
+            txtPhoneNumber.Text = ActivePlayer.PhoneNumber;
+        }
+
+
+
     }
 }

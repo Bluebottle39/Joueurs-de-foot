@@ -20,12 +20,15 @@ namespace Joueurs_de_foot
         
         private void cmdAdd_Click(object sender, EventArgs e)
         {
-            frmPlayer addPlayer = new frmPlayer();
+            Player newPlayer = new Player();
+            frmPlayer addPlayer = new frmPlayer(newPlayer);
+            
             addPlayer.ShowDialog();
             
-            if (addPlayer.Cancel != 1)
+            if (addPlayer.DialogResult == DialogResult.OK)
             {
-                lstPlayers.Items.Add(addPlayer.PlayerToAdd);
+                lstPlayers.Items.Add(addPlayer.ActivePlayer);
+                lstPlayers.SelectedIndex = lstPlayers.Items.Count -1;
             }
             
         }
@@ -37,27 +40,27 @@ namespace Joueurs_de_foot
 
         private void cmdModify_Click(object sender, EventArgs e)
         {
-            //if (lstPlayers.SelectedIndex != -1)
-            //{
-            //    Player player = new Player();
-            //    int index = lstPlayers.SelectedIndex;
+            if (lstPlayers.SelectedIndex != -1)
+            {
+                Player player = new Player();
+                int index = lstPlayers.SelectedIndex;
 
-            //    // player initialisé avec les valeurs de l'élément sélectionné
-            //    player = lstPlayers.SelectedItem as Player;
+                // player initialisé avec les valeurs de l'élément sélectionné
+                player = lstPlayers.SelectedItem as Player;
 
-            //    frmPlayer modifyPlayer = new frmPlayer(player);
+                frmPlayer modifyPlayer = new frmPlayer(player);
 
-            //    modifyPlayer.ShowDialog();
+                modifyPlayer.ShowDialog();
 
-            //    // Modification dans la liste et sélection du joueur
-            //    if (modifyPlayer.DialogResult == DialogResult.OK)
-            //    {
-            //        lstPlayers.Items.Insert(index, modifyPlayer.Competitor);
-            //        lstPlayers.Items.RemoveAt(index + 1);
-            //        lstPlayers.SelectedIndex = index;
+                // Modification dans la liste et sélection du joueur
+                if (modifyPlayer.DialogResult == DialogResult.OK)
+                {
+                    lstPlayers.Items.Insert(index, modifyPlayer.ActivePlayer);
+                    lstPlayers.Items.RemoveAt(index + 1);
+                    lstPlayers.SelectedIndex = index;
 
-            //    }
-            //}
+                }
+            }
         }
     }
 }

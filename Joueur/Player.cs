@@ -9,21 +9,21 @@ namespace player
     public class Player
     {
         //Attribute
-        private string name;
-        private string surname;
+        private string firstName;
+        private string lastName;
         private string phoneNumber;
 
         //methods
-        public string Name   // property
+        public string FirstName   // property
         {
-            get { return name; }   // get method
-            set { name = value; }  // set method
+            get { return firstName; }   // get method
+            set { firstName = value; }  // set method
         }
 
-        public string Surname   // property
+        public string LastName   // property
         {
-            get { return surname; }   // get method
-            set { surname = value; }  // set method
+            get { return lastName; }   // get method
+            set { lastName = value; }  // set method
         }
 
         public string PhoneNumber   // property
@@ -39,17 +39,21 @@ namespace player
 
         public override string ToString()
         {
-            return name + " " + surname;
+            return firstName + " " + lastName;
         }
 
 
 
         //construtor         
-        public Player(string _nom, string _prénom, string _numTelephone)
+        public Player(string _firstName, string _lastName, string _phoneNumber)
         {
-            this.name = _nom;
-            this.surname = _prénom;
-            this.phoneNumber = _numTelephone;
+            this.firstName = _firstName;
+            this.lastName = _lastName;
+            this.phoneNumber = _phoneNumber;
+        }
+        public Player()
+        {
+            
         }
     }
 
