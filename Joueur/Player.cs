@@ -8,7 +8,7 @@ namespace player
 {
     public class Player
     {
-        //Attribute
+        //Attributes
         private string firstName;
         private string lastName;
         private string phoneNumber;
@@ -45,12 +45,12 @@ namespace player
 
 
         //construtor         
-        public Player(string _firstName, string _lastName, string _phoneNumber)
-        {
-            this.firstName = _firstName;
-            this.lastName = _lastName;
-            this.phoneNumber = _phoneNumber;
-        }
+        //public Player(string _firstName, string _lastName, string _phoneNumber)
+        //{
+        //    this.firstName = _firstName;
+        //    this.lastName = _lastName;
+        //    this.phoneNumber = _phoneNumber;
+        //}
         public Player()
         {
             
