@@ -14,6 +14,7 @@ namespace Joueurs_de_foot
     public partial class frmPlayer : Form
     {
         private Player playerToAdd;
+        public int Cancel = 0;
 
         public Player PlayerToAdd   // property
         {
@@ -44,6 +45,7 @@ namespace Joueurs_de_foot
 
         private void cmdCancel_Click(object sender, EventArgs e)
         {
+            Cancel = 1;
             Close();
         }
     }
