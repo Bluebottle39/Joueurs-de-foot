@@ -62,5 +62,16 @@ namespace Joueurs_de_foot
                 }
             }
         }
+
+        private void cmdDelete_Click(object sender, EventArgs e)
+        {
+            if (lstPlayers.SelectedIndex != -1)
+            {
+                //int index = lstPlayers.SelectedIndex;
+                             
+                lstPlayers.Items.RemoveAt(lstPlayers.SelectedIndex);
+                lstPlayers.SelectedIndex = -1;               
+            }
+        }
     }
 }

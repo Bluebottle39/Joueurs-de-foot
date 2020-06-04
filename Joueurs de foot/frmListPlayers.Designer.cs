@@ -66,6 +66,7 @@
             this.cmdDelete.TabIndex = 2;
             this.cmdDelete.Text = "Supprimer";
             this.cmdDelete.UseVisualStyleBackColor = true;
+            this.cmdDelete.Click += new System.EventHandler(this.cmdDelete_Click);
             // 
             // cmdQuit
             // 
