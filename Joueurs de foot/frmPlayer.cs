@@ -35,16 +35,15 @@ namespace Joueurs_de_foot
 
             //activePlayer = new Player(_firstName, _lastName, _phoneNumber);
 
-            ActivePlayer.FirstName = txtFirstName.Text;
-            ActivePlayer.LastName = txtLastName.Text;
-            ActivePlayer.PhoneNumber = txtPhoneNumber.Text;
+            activePlayer.FirstName = txtFirstName.Text;
+            activePlayer.LastName = txtLastName.Text;
+            activePlayer.PhoneNumber = txtPhoneNumber.Text;
 
             Close();
         }
 
         private void cmdCancel_Click(object sender, EventArgs e)
-        {
-            
+        {            
             Close();
         }
 
@@ -58,15 +57,15 @@ namespace Joueurs_de_foot
 
         public frmPlayer(Player playerToModify)
         {
-            ActivePlayer = playerToModify;
-
             InitializeComponent();
-            txtFirstName.Text = ActivePlayer.FirstName;
-            txtLastName.Text = ActivePlayer.LastName;
-            txtPhoneNumber.Text = ActivePlayer.PhoneNumber;
+            
+            activePlayer = playerToModify;
+                        
+            txtFirstName.Text = activePlayer.FirstName;
+            txtLastName.Text = activePlayer.LastName;
+            txtPhoneNumber.Text = activePlayer.PhoneNumber;
         }
 
-
-
+        
     }
 }

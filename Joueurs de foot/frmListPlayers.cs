@@ -67,8 +67,7 @@ namespace Joueurs_de_foot
         {
             if (lstPlayers.SelectedIndex != -1)
             {
-                //int index = lstPlayers.SelectedIndex;
-                             
+                                            
                 lstPlayers.Items.RemoveAt(lstPlayers.SelectedIndex);
                 lstPlayers.SelectedIndex = -1;               
             }
